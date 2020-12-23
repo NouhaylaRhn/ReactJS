@@ -74,6 +74,8 @@ class Main extends Component {
       return <About leaders={this.state.leaders}></About>;
     }
 
+    
+
     return (
       <div className="App">
 
@@ -83,7 +85,7 @@ class Main extends Component {
           <Route path="/home" component={HomePage}/> 
           <Route exct path="/menu" component={ () => <Menu dishes={this.state.dishes}/>}/>
           <Route exact path='/menu/:dishId' component={DishWithId} />
-          <Route exact path='/contactus' component={Contact} />
+          <Route exact path='/contactus' component={ () => <Contact />} />
           <Route exact path='/aboutus' component={AboutUs} />
           <Redirect to="/home"/> 
         </Switch>
